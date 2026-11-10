@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghandour Import | Logistics & Commerce International</title>
+    <meta name="description" content="Importation directe de Chine vers le Québec. Sourcing en usine, contrôle qualité sur le terrain, logistique internationale et dédouanement CARM.">
+    
+    <!-- Favicon (Uses your 2nd icon-only image) -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#051322',
+                            900: '#091E36',
+                            800: '#0D3154',
+                            700: '#16436F',
+                        },
+                        gold: {
+                            600: '#C6830A',
+                            500: '#E09911',
+                            400: '#F5B027',
+                            300: '#FCD34D',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 5s ease-in-out infinite',
+                        'float-delayed': 'float 5s ease-in-out 2.5s infinite',
+                        'spin-slow': 'spin 28s linear infinite',
+                        'pulse-gold': 'pulseGold 3s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        pulseGold: {
+                            '0%, 100%': { boxShadow: '0 0 0 0 rgba(224, 153, 17, 0.4)' },
+                            '50%': { boxShadow: '0 0 0 15px rgba(224, 153, 17, 0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.12s; }
+        .reveal-delay-2 { transition-delay: 0.24s; }
+        .reveal-delay-3 { transition-delay: 0.36s; }
+
+        /* Seamless White Logo Blending */
+        .logo-blend {
+            mix-blend-mode: multiply;
+        }
+
+        /* Animated Grid Background for Hero */
+        .bg-industrial-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #051322; }
+        ::-webkit-scrollbar-thumb { background: #16436F; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #E09911; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-gold-500 selection:text-navy-950 overflow-x-hidden">
+
+    <!-- Top Executive Bar -->
+    <div class="bg-navy-950 text-slate-300 text-xs py-2.5 border-b border-navy-800 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 -ml-3.5"></span>
+                    <strong class="text-white font-medium" data-fr="Opérations Actives :" data-en="Active Operations:">Opérations Actives :</strong>
+                    <span data-fr="Montréal (QC) &bull; Ningbo &bull; Yiwu &bull; Shenzhen" data-en="Montreal (QC) &bull; Ningbo &bull; Yiwu &bull; Shenzhen">Montréal (QC) &bull; Ningbo &bull; Yiwu &bull; Shenzhen</span>
+                </span>
+                <span class="text-navy-700">|</span>
+                <span class="flex items-center gap-1.5 text-gold-400 font-medium">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                    <span data-fr="Importateur Canadien Certifié (ASFC / CARM)" data-en="Certified Canadian Importer (CBSA / CARM)">Importateur Canadien Certifié (ASFC / CARM)</span>
+                </span>
+            </div>
+            <div class="flex items-center space-x-5">
+                <a href="mailto:info@ghandourimport.ca" class="hover:text-gold-400 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="mail" class="w-3.5 h-3.5 text-gold-500"></i> info@ghandourimport.ca
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Frosted-White Navbar (Makes your white-background logo.png look 100% transparent & native) -->
+    <nav id="navbar" class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <!-- Full Logo (logo.png) -->
+                <a href="#" class="flex items-center group focus:outline-none">
+                    <img src="logo.png" alt="Ghandour Import - Logistics & Commerce International" 
+                         class="h-16 md:h-20 w-auto object-contain logo-blend transition-transform duration-300 group-hover:scale-[1.02]"
+                         onerror="this.outerHTML='<div class=\'flex items-center gap-3\'><div class=\'w-12 h-12 rounded-full bg-navy-900 text-gold-500 font-display font-black flex items-center justify-center text-2xl\'>G</div><div><span class=\'font-display font-black text-2xl text-navy-900 tracking-tight block leading-none\'>GHANDOUR</span><span class=\'font-display font-bold text-xs text-gold-600 tracking-widest block\'>IMPORT</span></div></div>'">
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-7">
+                    <a href="#avantage" class="text-navy-900 hover:text-gold-600 font-display font-bold text-xs uppercase tracking-wider transition-colors" data-fr="Pourquoi Nous" data-en="Why Us">Pourquoi Nous</a>
+                    <a href="#realisations" class="text-navy-900 hover:text-gold-600 font-display font-bold text-xs uppercase tracking-wider transition-colors" data-fr="Opérations en Chine" data-en="China Operations">Opérations en Chine</a>
+                    <a href="#processus" class="text-navy-900 hover:text-gold-600 font-display font-bold text-xs uppercase tracking-wider transition-colors" data-fr="Processus" data-en="Process">Processus</a>
+                    <a href="#faq" class="text-navy-900 hover:text-gold-600 font-display font-bold text-xs uppercase tracking-wider transition-colors" data-fr="FAQ" data-en="FAQ">FAQ</a>
+                    
+                    <!-- Language Switcher Button -->
+                    <button onclick="toggleLanguage()" id="langToggle" class="flex items-center gap-1.5 text-navy-900 hover:text-gold-600 font-display text-xs font-extrabold bg-slate-100 hover:bg-slate-200 px-3.5 py-2 rounded-lg border border-slate-300 transition-all">
+                        <i data-lucide="globe" class="w-3.5 h-3.5 text-gold-600"></i>
+                        <span id="langLabel">EN</span>
+                    </button>
+
+                    <!-- Primary CTA -->
+                    <a href="#soumission" class="bg-navy-900 hover:bg-gold-500 text-white hover:text-navy-950 font-display font-extrabold text-xs uppercase tracking-wider py-3.5 px-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <span data-fr="Demander une soumission" data-en="Request a Quote">Demander une soumission</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-gold-400 group-hover:text-navy-950"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Controls -->
+                <div class="lg:hidden flex items-center gap-3">
+                    <button onclick="toggleLanguage()" class="text-navy-900 font-display text-xs font-extrabold bg-slate-100 px-3 py-2 rounded-lg border border-slate-300">
+                        <span id="langLabelMobile">EN</span>
+                    </button>
+                    <button id="mobileMenuBtn" class="text-navy-900 hover:text-gold-600 p-2 rounded-lg bg-slate-100">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 shadow-xl">
+            <div class="px-4 pt-3 pb-6 space-y-2">
+                <a href="#avantage" class="mobile-link block px-3 py-2.5 text-navy-900 hover:bg-slate-100 rounded-lg font-display font-bold uppercase text-xs" data-fr="Pourquoi Nous" data-en="Why Us">Pourquoi Nous</a>
+                <a href="#realisations" class="mobile-link block px-3 py-2.5 text-navy-900 hover:bg-slate-100 rounded-lg font-display font-bold uppercase text-xs" data-fr="Opérations en Chine" data-en="China Operations">Opérations en Chine</a>
+                <a href="#processus" class="mobile-link block px-3 py-2.5 text-navy-900 hover:bg-slate-100 rounded-lg font-display font-bold uppercase text-xs" data-fr="Processus" data-en="Process">Processus</a>
+                <a href="#faq" class="mobile-link block px-3 py-2.5 text-navy-900 hover:bg-slate-100 rounded-lg font-display font-bold uppercase text-xs" data-fr="FAQ" data-en="FAQ">FAQ</a>
+                <a href="#soumission" class="mobile-link block mt-3 text-center bg-gold-500 text-navy-950 font-display font-extrabold uppercase text-xs py-3.5 rounded-lg shadow-md" data-fr="Demander une soumission" data-en="Request a Quote">Demander une soumission</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-navy-950 text-white py-20 lg:py-28 overflow-hidden bg-industrial-grid">
+        <!-- Ambient Gold & Navy Glows -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-gold-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 right-0 w-[32rem] h-[32rem] bg-navy-700/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Column: Copy & CTAs -->
+                <div class="lg:col-span-7 reveal active">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-900/90 border border-gold-500/40 text-gold-400 text-xs font-display font-bold uppercase tracking-wider mb-6 shadow-sm">
+                        <i data-lucide="compass" class="w-4 h-4"></i>
+                        <span data-fr="Pont Direct : Usines en Chine → Entreprises au Québec" data-en="Direct Bridge: China Factories → Quebec Businesses">Pont Direct : Usines en Chine → Entreprises au Québec</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-black leading-[1.1] tracking-tight mb-6">
+                        <span data-fr="Importez à la source." data-en="Source at the Factory.">Importez à la source.</span><br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-500 to-amber-300" data-fr="Sans intermédiaire. Sans mauvaise surprise." data-en="Zero Middlemen. Zero Blind Risks.">Sans intermédiaire. Sans mauvaise surprise.</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-8 max-w-2xl" data-fr="Ghandour Import déploie son équipe sur le terrain en Chine pour auditer vos fournisseurs, négocier les vrais prix d'usine, inspecter chaque cargaison avant le départ et gérer le transport et le dédouanement jusqu'à votre porte au Canada." data-en="Ghandour Import deploys its on-the-ground team in China to audit suppliers, negotiate real factory pricing, inspect every shipment before departure, and handle freight and customs clearance straight to your door in Canada.">
+                        Ghandour Import déploie son équipe sur le terrain en Chine pour auditer vos fournisseurs, négocier les vrais prix d'usine, inspecter chaque cargaison avant le départ et gérer le transport et le dédouanement jusqu'à votre porte au Canada.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="#soumission" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-display font-extrabold text-sm uppercase tracking-wider py-4 px-8 rounded-xl shadow-lg shadow-gold-500/25 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2.5 animate-pulse-gold">
+                            <span data-fr="Obtenir une estimation gratuite" data-en="Get a Free Landed-Cost Quote">Obtenir une estimation gratuite</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#realisations" class="bg-navy-900/80 hover:bg-navy-800 text-white border border-navy-700 font-display font-bold text-sm uppercase tracking-wider py-4 px-7 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="camera" class="w-4 h-4 text-gold-400"></i>
+                            <span data-fr="Voir nos opérations en Chine" data-en="See Our China Operations">Voir nos opérations en Chine</span>
+                        </a>
+                    </div>
+
+                    <!-- Mini Trust Row -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-navy-800/80 text-xs sm:text-sm text-slate-300">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-500 shrink-0"></i>
+                            <span data-fr="Équipe locale en Chine" data-en="Local team in China">Équipe locale en Chine</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-500 shrink-0"></i>
+                            <span data-fr="Inspection photo & vidéo" data-en="Photo & video QC">Inspection photo & vidéo</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-500 shrink-0"></i>
+                            <span data-fr="Prix DDP clé en main" data-en="Turnkey landed pricing">Prix DDP clé en main</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Animated Brand Emblem (Uses favicon.png) & Floating Live Telemetry Cards -->
+                <div class="lg:col-span-5 relative flex items-center justify-center py-8">
+                    <!-- Rotating Decorative Gold Orbit Ring -->
+                    <div class="w-72 h-72 sm:w-88 sm:h-88 rounded-full border-2 border-dashed border-gold-500/35 animate-spin-slow absolute"></div>
+                    <div class="w-80 h-80 sm:w-96 sm:h-96 rounded-full border border-navy-700/60 absolute"></div>
+
+                    <!-- Center Emblem Card Featuring Your 2nd Logo (favicon.png) -->
+                    <div class="relative z-10 w-52 h-52 sm:w-64 sm:h-64 rounded-full bg-white shadow-2xl shadow-black/60 border-4 border-gold-500 p-5 flex items-center justify-center animate-float">
+                        <img src="favicon.png" alt="Ghandour Import Emblem" class="w-full h-full object-contain logo-blend"
+                             onerror="this.outerHTML='<div class=\'text-center\'><span class=\'font-display font-black text-6xl text-navy-900\'>G</span><span class=\'block text-xs font-bold text-gold-600 uppercase tracking-widest mt-1\'>GLOBAL</span></div>'">
+                    </div>
+
+                    <!-- Floating Card 1: Factory QC Status -->
+                    <div class="absolute -top-2 left-0 sm:-left-4 z-20 bg-navy-900/95 backdrop-blur-md border border-navy-700 p-3.5 rounded-xl shadow-xl animate-float-delayed max-w-[215px]">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+                                <i data-lucide="FileCheck" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-[11px] text-slate-400 uppercase font-bold tracking-wider" data-fr="Rapport QC #GI-409" data-en="QC Report #GI-409">Rapport QC #GI-409</div>
+                                <div class="text-xs font-display font-bold text-white" data-fr="Inspection Usine : 100% Conforme" data-en="Factory QC: 100% Passed">Inspection Usine : 100% Conforme</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Card 2: Active Route Corridor -->
+                    <div class="absolute -bottom-3 right-0 sm:-right-4 z-20 bg-navy-900/95 backdrop-blur-md border border-gold-500/40 p-3.5 rounded-xl shadow-xl animate-float max-w-[235px]">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-gold-500/20 border border-gold-500/40 flex items-center justify-center text-gold-400 shrink-0">
+                                <i data-lucide="ship" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-[11px] text-gold-400 uppercase font-bold tracking-wider" data-fr="Corridor Direct" data-en="Direct Corridor">Corridor Direct</div>
+                                <div class="text-xs font-display font-bold text-white" data-fr="Ningbo / Shenzhen → Montréal" data-en="Ningbo / Shenzhen → Montreal">Ningbo / Shenzhen → Montréal</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ANIMATED METRICS & CORRIDOR BAR -->
+    <section class="bg-navy-900 border-y border-navy-800 py-12 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-x divide-navy-800">
+                <div class="px-2 reveal">
+                    <div class="text-3xl sm:text-4xl font-display font-black text-gold-400 mb-1">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <div class="text-xs sm:text-sm font-display font-bold text-white uppercase tracking-wider" data-fr="Marchandise Inspectée" data-en="Goods Inspected in China">Marchandise Inspectée</div>
+                    <div class="text-xs text-slate-400 mt-1" data-fr="Avant paiement final à l'usine" data-en="Before final factory balance payment">Avant paiement final à l'usine</div>
+                </div>
+
+                <div class="px-2 reveal reveal-delay-1">
+                    <div class="text-3xl sm:text-4xl font-display font-black text-gold-400 mb-1">
+                        <span class="counter" data-target="4">0</span> Hubs
+                    </div>
+                    <div class="text-xs sm:text-sm font-display font-bold text-white uppercase tracking-wider" data-fr="Présence Industrielle" data-en="Industrial Presence">Présence Industrielle</div>
+                    <div class="text-xs text-slate-400 mt-1" data-fr="Yiwu, Ningbo, Shenzhen, Guangzhou" data-en="Yiwu, Ningbo, Shenzhen, Guangzhou">Yiwu, Ningbo, Shenzhen, Guangzhou</div>
+                </div>
+
+                <div class="px-2 reveal reveal-delay-2">
+                    <div class="text-3xl sm:text-4xl font-display font-black text-gold-400 mb-1">
+                        <span class="counter" data-target="0">0</span>
+                    </div>
+                    <div class="text-xs sm:text-sm font-display font-bold text-white uppercase tracking-wider" data-fr="Intermédiaire Caché" data-en="Hidden Middlemen">Intermédiaire Caché</div>
+                    <div class="text-xs text-slate-400 mt-1" data-fr="Négociation directe avec le fabricant" data-en="Direct negotiation with manufacturers">Négociation directe avec le fabricant</div>
+                </div>
+
+                <div class="px-2 reveal reveal-delay-3">
+                    <div class="text-3xl sm:text-4xl font-display font-black text-gold-400 mb-1">
+                        A <span class="text-white text-xl">→</span> Z
+                    </div>
+                    <div class="text-xs sm:text-sm font-display font-bold text-white uppercase tracking-wider" data-fr="Dédouanement & CARM" data-en="Customs & CARM Clearance">Dédouanement & CARM</div>
+                    <div class="text-xs text-slate-400 mt-1" data-fr="Conformité totale Canada / Québec" data-en="Full Canadian / Quebec compliance">Conformité totale Canada / Québec</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY GHANDOUR IMPORT (COMPARISON SECTION) -->
+    <section id="avantage" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-gold-600 font-display font-extrabold text-xs uppercase tracking-widest block mb-2" data-fr="L'Avantage Stratégique" data-en="The Strategic Advantage">L'Avantage Stratégique</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black text-navy-950 mb-4" data-fr="Pourquoi les entreprises québécoises passent par nous" data-en="Why Quebec Businesses Import Through Us">Pourquoi les entreprises québécoises passent par nous</h2>
+                <p class="text-slate-600 leading-relaxed" data-fr="Commander à l'aveugle sur Alibaba vous expose aux revendeurs déguisés en usines, aux défauts de qualité découverts une fois le conteneur arrivé à Montréal, et aux blocages douaniers." data-en="Ordering blindly on Alibaba exposes you to middlemen posing as factories, quality defects discovered only after the container arrives in Montreal, and costly customs delays.">
+                    Commander à l'aveugle sur Alibaba vous expose aux revendeurs déguisés en usines, aux défauts de qualité découverts une fois le conteneur arrivé à Montréal, et aux blocages douaniers.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Card 1: Local Wholesaler -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-md bg-slate-200 text-slate-700 font-display font-bold text-xs uppercase mb-4" data-fr="Option Classique" data-en="Traditional Option">Option Classique</div>
+                        <h3 class="text-xl font-display font-extrabold text-navy-950 mb-6" data-fr="Grossiste Local au Canada" data-en="Local Canadian Wholesaler">Grossiste Local au Canada</h3>
+                        <ul class="space-y-4 text-sm text-slate-600">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+                                <span data-fr="Marges gonflées de +40% à +150% par les distributeurs intermédiaires" data-en="Prices marked up +40% to +150% by middleman distributors">Marges gonflées de +40% à +150% par les distributeurs intermédiaires</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+                                <span data-fr="Catalogue limité, aucune personnalisation (Private Label impossible)" data-en="Limited catalog, zero custom specs or private labeling">Catalogue limité, aucune personnalisation (Private Label impossible)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
+                                <span data-fr="Aucune gestion douanière requise" data-en="No customs paperwork required">Aucune gestion douanière requise</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-bold text-slate-500 uppercase" data-fr="Résultat : Vos marges bénéficiaires sont sacrifiées" data-en="Result: Your profit margins are sacrificed">Résultat : Vos marges bénéficiaires sont sacrifiées</div>
+                </div>
+
+                <!-- Card 2: Blind Alibaba -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 flex flex-col justify-between reveal reveal-delay-1">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-md bg-amber-100 text-amber-800 font-display font-bold text-xs uppercase mb-4" data-fr="Haut Risque" data-en="High Risk">Haut Risque</div>
+                        <h3 class="text-xl font-display font-extrabold text-navy-950 mb-6" data-fr="Commander Seul (Alibaba / Web)" data-en="Ordering Alone (Alibaba / Web)">Commander Seul (Alibaba / Web)</h3>
+                        <ul class="space-y-4 text-sm text-slate-600">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+                                <span data-fr="80% des profils sont des sociétés écrans (Trading Companies), pas de vraies usines" data-en="80% of listings are trading companies, not actual factories">80% des profils sont des sociétés écrans (Trading Companies), pas de vraies usines</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+                                <span data-fr="Aucun contrôle qualité réel avant que le navire ne quitte la Chine" data-en="Zero independent quality inspection before the ship leaves China">Aucun contrôle qualité réel avant que le navire ne quitte la Chine</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+                                <span data-fr="Frais portuaires cachés (LCL/FCL), codes SH complexes et blocages CARM" data-en="Hidden port fees, complex HS tariff codes, and CARM customs holds">Frais portuaires cachés (LCL/FCL), codes SH complexes et blocages CARM</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-bold text-red-600 uppercase" data-fr="Résultat : Risque financier et logistique élevé" data-en="Result: High financial and operational risk">Résultat : Risque financier et logistique élevé</div>
+                </div>
+
+                <!-- Card 3: Ghandour Import (Highlighted Winner) -->
+                <div class="bg-navy-950 text-white rounded-2xl p-8 border-2 border-gold-500 shadow-2xl relative flex flex-col justify-between transform lg:-translate-y-4 reveal reveal-delay-2">
+                    <div class="absolute -top-4 right-6 bg-gold-500 text-navy-950 font-display font-black text-xs uppercase px-4 py-1.5 rounded-full shadow-md" data-fr="La Solution Ghandour Import" data-en="The Ghandour Import Standard">La Solution Ghandour Import</div>
+                    <div>
+                        <div class="flex items-center gap-3 mb-5">
+                            <img src="favicon.png" alt="Ghandour Seal" class="w-10 h-10 rounded-full bg-white p-1 object-contain">
+                            <div>
+                                <h3 class="text-xl font-display font-black text-white leading-tight">Ghandour Import</h3>
+                                <span class="text-xs text-gold-400 font-medium" data-fr="Équipe en Chine + Gestion au Québec" data-en="China Team + Quebec Management">Équipe en Chine + Gestion au Québec</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-4 text-sm text-slate-200 mt-6">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+                                <span data-fr="Vérification physique des usines et négociation en mandarin aux tarifs locaux chinois" data-en="Physical factory audits and Mandarin negotiation at true domestic Chinese pricing">Vérification physique des usines et négociation en mandarin aux tarifs locaux chinois</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+                                <span data-fr="Rapport d'inspection complet (photos, vidéos, tests) en Chine avant expédition" data-en="Full inspection report (photos, videos, testing) in China before shipping">Rapport d'inspection complet (photos, vidéos, tests) en Chine avant expédition</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0 mt-0.5"></i>
+                                <span data-fr="Fret maritime/aérien, dédouanement ASFC/CARM et livraison clé en main au Québec" data-en="Sea/air freight, CBSA/CARM customs clearance, and turnkey delivery in Quebec">Fret maritime/aérien, dédouanement ASFC/CARM et livraison clé en main au Québec</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-navy-800 flex items-center justify-between">
+                        <span class="text-xs font-display font-extrabold text-gold-400 uppercase" data-fr="Prix Direct Usine + Sécurité Totale" data-en="Factory-Direct Pricing + Total Security">Prix Direct Usine + Sécurité Totale</span>
+                        <a href="#soumission" class="text-white hover:text-gold-400"><i data-lucide="arrow-right-circle" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHINA OPERATIONS & CASE STUDIES SHOWCASE (FILTERABLE GALLERY WITH PHOTOS) -->
+    <section id="realisations" class="py-24 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal">
+                <div class="max-w-2xl">
+                    <span class="text-gold-600 font-display font-extrabold text-xs uppercase tracking-widest block mb-2" data-fr="Sur le Terrain en Chine" data-en="On the Ground in China">Sur le Terrain en Chine</span>
+                    <h2 class="text-3xl sm:text-4xl font-display font-black text-navy-950" data-fr="Exemples d'Opérations & Sourcing Direct" data-en="Sample Operations & Factory Sourcing">Exemples d'Opérations & Sourcing Direct</h2>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0">
+                    <button onclick="filterPortfolio('all')" class="filter-btn active-filter px-4 py-2 rounded-lg font-display font-bold text-xs uppercase tracking-wider bg-navy-950 text-gold-400 transition-all" data-fr="Tous" data-en="All">Tous</button>
+                    <button onclick="filterPortfolio('qc')" class="filter-btn px-4 py-2 rounded-lg font-display font-bold text-xs uppercase tracking-wider bg-white text-navy-900 hover:bg-slate-200 border border-slate-300 transition-all" data-fr="Inspection Usine" data-en="Factory QC">Inspection Usine</button>
+                    <button onclick="filterPortfolio('sourcing')" class="filter-btn px-4 py-2 rounded-lg font-display font-bold text-xs uppercase tracking-wider bg-white text-navy-900 hover:bg-slate-200 border border-slate-300 transition-all" data-fr="Production sur Mesure" data-en="Custom Sourcing">Production sur Mesure</button>
+                    <button onclick="filterPortfolio('logistics')" class="filter-btn px-4 py-2 rounded-lg font-display font-bold text-xs uppercase tracking-wider bg-white text-navy-900 hover:bg-slate-200 border border-slate-300 transition-all" data-fr="Fret & Conteneurs" data-en="Freight & Containers">Fret & Conteneurs</button>
+                </div>
+            </div>
+
+            <!-- 6-Card Showcase Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Case Study 1 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-slate-200 transition-all duration-300 flex flex-col" data-category="qc">
+                    <div class="relative h-60 overflow-hidden bg-navy-900">
+                        <!-- REMPLACER PHOTO ICI : Vous pourrez remplacer ce lien par votre propre photo (ex: src="inspection-chine.jpg") -->
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80" alt="Inspection Qualité en Usine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-navy-950/90 backdrop-blur-sm text-gold-400 font-display font-bold text-[11px] uppercase px-3 py-1 rounded-full border border-gold-500/30 flex items-center gap-1.5">
+                            <i data-lucide="map-pin" class="w-3 h-3"></i> Shenzhen, Guangdong
+                        </span>
+                        <span class="absolute bottom-3 left-4 text-white font-display font-extrabold text-xs bg-emerald-600/90 px-2.5 py-1 rounded" data-fr="Inspection AQL 100% Validée" data-en="100% AQL Inspection Passed">Inspection AQL 100% Validée</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-lg text-navy-950 mb-2" data-fr="Contrôle Qualité Électronique & Composants" data-en="Electronics & Hardware Quality Control">Contrôle Qualité Électronique & Composants</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4" data-fr="Vérification sur ligne d'assemblage par notre équipe avant emballage. Test fonctionnel de tolérance, vérification des normes canadiennes et rapport vidéo transmis au client à Montréal." data-en="Assembly line verification by our team prior to packaging. Functional tolerance testing, Canadian standards verification, and video report sent directly to our Montreal client.">
+                                Vérification sur ligne d'assemblage par notre équipe avant emballage. Test fonctionnel de tolérance, vérification des normes canadiennes et rapport vidéo transmis au client à Montréal.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs font-bold text-navy-800">
+                            <span data-fr="Défauts interceptés : 4.2% corrigés en usine" data-en="Defects caught: 4.2% fixed at factory">Défauts interceptés : 4.2% corrigés en usine</span>
+                            <i data-lucide="shield-check" class="w-4 h-4 text-gold-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-slate-200 transition-all duration-300 flex flex-col" data-category="logistics">
+                    <div class="relative h-60 overflow-hidden bg-navy-900">
+                        <!-- REMPLACER PHOTO ICI -->
+                        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=900&q=80" alt="Chargement Conteneur Port de Ningbo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-navy-950/90 backdrop-blur-sm text-gold-400 font-display font-bold text-[11px] uppercase px-3 py-1 rounded-full border border-gold-500/30 flex items-center gap-1.5">
+                            <i data-lucide="map-pin" class="w-3 h-3"></i> Port de Ningbo-Zhoushan
+                        </span>
+                        <span class="absolute bottom-3 left-4 text-navy-950 font-display font-extrabold text-xs bg-gold-400 px-2.5 py-1 rounded" data-fr="Expédition FCL 40' HQ & LCL" data-en="40' HQ FCL & LCL Consolidation">Expédition FCL 40' HQ & LCL</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-lg text-navy-950 mb-2" data-fr="Consolidation Multi-Usines & Fret Maritime" data-en="Multi-Factory Consolidation & Sea Freight">Consolidation Multi-Usines & Fret Maritime</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4" data-fr="Regroupement des commandes provenant de 3 manufacturiers différents dans notre entrepôt partenaire à Ningbo, supervision du chargement conteneur et dédouanement CARM complet." data-en="Consolidating orders from 3 separate manufacturers into our partner warehouse in Ningbo, container loading supervision, and full CARM customs clearance.">
+                                Regroupement des commandes provenant de 3 manufacturiers différents dans notre entrepôt partenaire à Ningbo, supervision du chargement conteneur et dédouanement CARM complet.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs font-bold text-navy-800">
+                            <span data-fr="Économie sur le fret : -28% par unité" data-en="Freight savings: -28% per unit">Économie sur le fret : -28% par unité</span>
+                            <i data-lucide="anchor" class="w-4 h-4 text-gold-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-slate-200 transition-all duration-300 flex flex-col" data-category="sourcing">
+                    <div class="relative h-60 overflow-hidden bg-navy-900">
+                        <!-- REMPLACER PHOTO ICI -->
+                        <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80" alt="Sourcing Industriel & Emballage Sur Mesure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-navy-950/90 backdrop-blur-sm text-gold-400 font-display font-bold text-[11px] uppercase px-3 py-1 rounded-full border border-gold-500/30 flex items-center gap-1.5">
+                            <i data-lucide="map-pin" class="w-3 h-3"></i> Yiwu & Hangzhou, Zhejiang
+                        </span>
+                        <span class="absolute bottom-3 left-4 text-white font-display font-extrabold text-xs bg-navy-800 border border-gold-500/40 px-2.5 py-1 rounded" data-fr="OEM / Marque Privée (Private Label)" data-en="OEM / Custom Private Label">OEM / Marque Privée (Private Label)</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-lg text-navy-950 mb-2" data-fr="Fabrication sur Mesure & Emballage Bilingue" data-en="Custom Manufacturing & Bilingual Packaging">Fabrication sur Mesure & Emballage Bilingue</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4" data-fr="Développement d'échantillons en usine avec cahier des charges précis, impression d'emballages conformes aux normes québécoises (FR/EN) et négociation directe des moules." data-en="Factory sample development with strict technical specs, bilingual packaging printing compliant with Quebec regulations (FR/EN), and direct tooling negotiation.">
+                                Développement d'échantillons en usine avec cahier des charges précis, impression d'emballages conformes aux normes québécoises (FR/EN) et négociation directe des moules.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs font-bold text-navy-800">
+                            <span data-fr="Économie vs grossiste local : ~45%" data-en="Savings vs local wholesaler: ~45%">Économie vs grossiste local : ~45%</span>
+                            <i data-lucide="package-check" class="w-4 h-4 text-gold-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 4 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-slate-200 transition-all duration-300 flex flex-col" data-category="sourcing">
+                    <div class="relative h-60 overflow-hidden bg-navy-900">
+                        <!-- REMPLACER PHOTO ICI -->
+                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80" alt="Usinage Métallique & Équipement Industriel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-navy-950/90 backdrop-blur-sm text-gold-400 font-display font-bold text-[11px] uppercase px-3 py-1 rounded-full border border-gold-500/30 flex items-center gap-1.5">
+                            <i data-lucide="map-pin" class="w-3 h-3"></i> Suzhou & Shanghai
+                        </span>
+                        <span class="absolute bottom-3 left-4 text-navy-950 font-display font-extrabold text-xs bg-gold-400 px-2.5 py-1 rounded" data-fr="Audit Technique & Usinage" data-en="Technical Audit & Machining">Audit Technique & Usinage</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-lg text-navy-950 mb-2" data-fr="Pièces Mécaniques, Quincaillerie & Outillage" data-en="Mechanical Parts, Hardware & Tooling">Pièces Mécaniques, Quincaillerie & Outillage</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4" data-fr="Sourcing auprès d'usines certifiées ISO 9001 pour pièces d'acier, aluminium et équipements commerciaux. Vérification dimensionnelle au pied à coulisse avant expédition." data-en="Sourcing from ISO 9001 certified factories for steel, aluminum parts, and commercial equipment. Caliper dimensional verification prior to shipment.">
+                                Sourcing auprès d'usines certifiées ISO 9001 pour pièces d'acier, aluminium et équipements commerciaux. Vérification dimensionnelle au pied à coulisse avant expédition.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs font-bold text-navy-800">
+                            <span data-fr="Certificats matière & conformité vérifiés" data-en="Material & compliance certificates verified">Certificats matière & conformité vérifiés</span>
+                            <i data-lucide="wrench" class="w-4 h-4 text-gold-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 5 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-slate-200 transition-all duration-300 flex flex-col" data-category="qc">
+                    <div class="relative h-60 overflow-hidden bg-navy-900">
+                        <!-- REMPLACER PHOTO ICI -->
+                        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80" alt="Entrepôt & Vérification des Palettes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-navy-950/90 backdrop-blur-sm text-gold-400 font-display font-bold text-[11px] uppercase px-3 py-1 rounded-full border border-gold-500/30 flex items-center gap-1.5">
+                            <i data-lucide="map-pin" class="w-3 h-3"></i> Foshan & Guangzhou
+                        </span>
+                        <span class="absolute bottom-3 left-4 text-white font-display font-extrabold text-xs bg-emerald-600/90 px-2.5 py-1 rounded" data-fr="Audit Physique & Échantillonnage" data-en="Physical Audit & Sampling">Audit Physique & Échantillonnage</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-lg text-navy-950 mb-2" data-fr="Mobilier Commercial, Aménagement & Restauration" data-en="Commercial Furniture, Hospitality & Fit-Outs">Mobilier Commercial, Aménagement & Restauration</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4" data-fr="Sélection directe dans les capitales manufacturières de Foshan pour projets commerciaux, hôtels et restaurants québécois. Emballage renforcé anti-choc pour le transit maritime." data-en="Direct selection in Foshan's manufacturing hubs for Quebec commercial projects, hotels, and restaurants. Reinforced impact-resistant packaging for ocean transit.">
+                                Sélection directe dans les capitales manufacturières de Foshan pour projets commerciaux, hôtels et restaurants québécois. Emballage renforcé anti-choc pour le transit maritime.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs font-bold text-navy-800">
+                            <span data-fr="Zéro bris à la livraison à Montréal" data-en="Zero breakage upon Montreal delivery">Zéro bris à la livraison à Montréal</span>
+                            <i data-lucide="award" class="w-4 h-4 text-gold-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 6 -->
+                <div class="portfolio-item group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl border border-slate-200 transition-all duration-300 flex flex-col" data-category="logistics">
+                    <div class="relative h-60 overflow-hidden bg-navy-900">
+                        <!-- REMPLACER PHOTO ICI -->
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80" alt="Fret Maritime & Dédouanement Canada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent"></div>
+                        <span class="absolute top-4 left-4 bg-navy-950/90 backdrop-blur-sm text-gold-400 font-display font-bold text-[11px] uppercase px-3 py-1 rounded-full border border-gold-500/30 flex items-center gap-1.5">
+                            <i data-lucide="map-pin" class="w-3 h-3"></i> Shanghai → Montréal, QC
+                        </span>
+                        <span class="absolute bottom-3 left-4 text-white font-display font-extrabold text-xs bg-navy-800 border border-gold-500/40 px-2.5 py-1 rounded" data-fr="Service Clé en Main DDP" data-en="Turnkey DDP Service">Service Clé en Main DDP</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-lg text-navy-950 mb-2" data-fr="Dédouanement ASFC / CARM & Livraison Finale" data-en="CBSA / CARM Customs & Final Delivery">Dédouanement ASFC / CARM & Livraison Finale</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4" data-fr="Classification tarifaire SH exacte, gestion des droits de douane, conformité réglementaire canadienne et transport par camion jusqu'à votre entrepôt au Québec." data-en="Accurate HS tariff classification, customs duty management, Canadian regulatory compliance, and final trucking straight to your warehouse in Quebec.">
+                                Classification tarifaire SH exacte, gestion des droits de douane, conformité réglementaire canadienne et transport par camion jusqu'à votre entrepôt au Québec.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-xs font-bold text-navy-800">
+                            <span data-fr="Suivi en temps réel jusqu'à votre quai" data-en="Real-time tracking to your loading dock">Suivi en temps réel jusqu'à votre quai</span>
+                            <i data-lucide="truck" class="w-4 h-4 text-gold-600"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-STEP END-TO-END PROCESS -->
+    <section id="processus" class="py-24 bg-navy-950 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-gold-400 font-display font-extrabold text-xs uppercase tracking-widest block mb-2" data-fr="Méthodologie Rigoureuse" data-en="Rigorous Methodology">Méthodologie Rigoureuse</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black text-white mb-4" data-fr="Votre importation gérée de A à Z en 4 étapes" data-en="Your Import Managed End-to-End in 4 Steps">Votre importation gérée de A à Z en 4 étapes</h2>
+                <p class="text-slate-400" data-fr="Un processus transparent où vous validez chaque jalon avant de passer au suivant." data-en="A transparent workflow where you approve every milestone before moving to the next.">
+                    Un processus transparent où vous validez chaque jalon avant de passer au suivant.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-navy-900/90 border border-navy-800 hover:border-gold-500/60 p-7 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 reveal">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/15 border border-gold-500/40 flex items-center justify-center text-gold-400">
+                            <i data-lucide="search-check" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-display font-black text-3xl text-navy-700">01</span>
+                    </div>
+                    <h3 class="text-lg font-display font-extrabold text-white mb-3" data-fr="Sourcing & Audit d'Usine" data-en="Sourcing & Factory Vetting">Sourcing & Audit d'Usine</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-fr="Vous nous partagez vos spécifications ou liens produits. Notre équipe en Chine identifie les vrais manufacturiers, vérifie leurs licences d'exploitation et négocie les tarifs directs." data-en="Share your specs or product links. Our team in China identifies the real manufacturers, verifies their business licenses, and negotiates factory-direct pricing.">
+                        Vous nous partagez vos spécifications ou liens produits. Notre équipe en Chine identifie les vrais manufacturiers, vérifie leurs licences d'exploitation et négocie les tarifs directs.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-navy-900/90 border border-navy-800 hover:border-gold-500/60 p-7 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 reveal reveal-delay-1">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/15 border border-gold-500/40 flex items-center justify-center text-gold-400">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-display font-black text-3xl text-navy-700">02</span>
+                    </div>
+                    <h3 class="text-lg font-display font-extrabold text-white mb-3" data-fr="Échantillonnage & Contrat" data-en="Sampling & Contracting">Échantillonnage & Contrat</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-fr="Validation des prototypes et échantillons physiques. Signature d'un contrat manufacturier verrouillant la qualité, les matériaux et les délais de production." data-en="Validation of prototypes and physical samples. Signing a manufacturing agreement locking in quality standards, materials, and production lead times.">
+                        Validation des prototypes et échantillons physiques. Signature d'un contrat manufacturier verrouillant la qualité, les matériaux et les délais de production.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-navy-900/90 border border-navy-800 hover:border-gold-500/60 p-7 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 reveal reveal-delay-2">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/15 border border-gold-500/40 flex items-center justify-center text-gold-400">
+                            <i data-lucide="microscope" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-display font-black text-3xl text-navy-700">03</span>
+                    </div>
+                    <h3 class="text-lg font-display font-extrabold text-white mb-3" data-fr="Inspection Pré-Expédition" data-en="Pre-Shipment Inspection">Inspection Pré-Expédition</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-fr="Nos inspecteurs se rendent à l'usine en Chine pour contrôler la marchandise finie. Vous recevez un rapport photo et vidéo détaillé avant que la cargaison ne quitte l'usine." data-en="Our inspectors visit the factory in China to check finished goods. You receive a detailed photo and video report before the shipment ever leaves the factory.">
+                        Nos inspecteurs se rendent à l'usine en Chine pour contrôler la marchandise finie. Vous recevez un rapport photo et vidéo détaillé avant que la cargaison ne quitte l'usine.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-navy-900/90 border border-navy-800 hover:border-gold-500/60 p-7 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 reveal reveal-delay-3">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/15 border border-gold-500/40 flex items-center justify-center text-gold-400">
+                            <i data-lucide="ship" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-display font-black text-3xl text-navy-700">04</span>
+                    </div>
+                    <h3 class="text-lg font-display font-extrabold text-white mb-3" data-fr="Fret, Douanes & Livraison" data-en="Freight, Customs & Delivery">Fret, Douanes & Livraison</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-fr="Transport maritime ou aérien, dédouanement complet auprès de l'ASFC (système CARM) et livraison directe à votre entrepôt ou commerce au Québec." data-en="Sea or air freight, complete CBSA customs clearance (CARM system), and direct delivery to your warehouse or business location in Quebec.">
+                        Transport maritime ou aérien, dédouanement complet auprès de l'ASFC (système CARM) et livraison directe à votre entrepôt ou commerce au Québec.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE FAQ ACCORDION -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 reveal">
+                <span class="text-gold-600 font-display font-extrabold text-xs uppercase tracking-widest block mb-2" data-fr="Questions Fréquentes" data-en="Frequently Asked Questions">Questions Fréquentes</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-black text-navy-950" data-fr="Tout savoir avant d'importer" data-en="Everything You Need to Know">Tout savoir avant d'importer</h2>
+            </div>
+
+            <div class="space-y-4 reveal">
+                <!-- FAQ 1 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-display font-bold text-navy-950 hover:text-gold-600 transition-colors">
+                        <span data-fr="Quel est le volume ou budget minimum pour travailler avec Ghandour Import ?" data-en="What is the minimum order volume or budget to work with Ghandour Import?">Quel est le volume ou budget minimum pour travailler avec Ghandour Import ?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-4" data-fr="Nous accompagnons aussi bien les PME québécoises qui importent quelques palettes (groupage maritime LCL ou fret aérien) que les entreprises qui commandent des conteneurs complets (20' ou 40' HQ). Lors de votre demande de soumission, nous calculons le seuil de rentabilité exact incluant le transport et les douanes." data-en="We support both Quebec SMBs importing a few pallets (LCL sea consolidation or air freight) and companies ordering full containers (20' or 40' HQ). When you request a quote, we calculate the exact break-even landed cost including freight and customs.">
+                        Nous accompagnons aussi bien les PME québécoises qui importent quelques palettes (groupage maritime LCL ou fret aérien) que les entreprises qui commandent des conteneurs complets (20' ou 40' HQ). Lors de votre demande de soumission, nous calculons le seuil de rentabilité exact incluant le transport et les douanes.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-display font-bold text-navy-950 hover:text-gold-600 transition-colors">
+                        <span data-fr="Comment fonctionne votre contrôle qualité en Chine ?" data-en="How does your quality control process work in China?">Comment fonctionne votre contrôle qualité en Chine ?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-4" data-fr="Avant que le solde final ne soit payé au manufacturier et avant que la marchandise ne quitte l'usine, notre équipe locale en Chine inspecte physiquement les produits selon votre cahier des charges (dimensions, matériaux, finitions, fonctionnement, emballage). Vous recevez un rapport complet avec photos et vidéos HD." data-en="Before the final balance is paid to the manufacturer and before the goods leave the factory, our local team in China physically inspects the products against your specifications (dimensions, materials, finish, functionality, packaging). You receive a full report with HD photos and videos.">
+                        Avant que le solde final ne soit payé au manufacturier et avant que la marchandise ne quitte l'usine, notre équipe locale en Chine inspecte physiquement les produits selon votre cahier des charges (dimensions, matériaux, finitions, fonctionnement, emballage). Vous recevez un rapport complet avec photos et vidéos HD.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-display font-bold text-navy-950 hover:text-gold-600 transition-colors">
+                        <span data-fr="Qui s'occupe du dédouanement canadien et du portail CARM ?" data-en="Who handles Canadian customs clearance and CARM compliance?">Qui s'occupe du dédouanement canadien et du portail CARM ?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-4" data-fr="Nous prenons en charge l'ensemble du processus douanier et logistique : détermination des codes tarifaires SH, déclaration d'importation commerciale, conformité ASFC/CARM et livraison finale jusqu'à votre adresse au Québec. Vous recevez un prix clé en main sans frais cachés." data-en="We handle the entire customs and logistics process: HS tariff code classification, commercial import declaration, CBSA/CARM compliance, and final delivery straight to your address in Quebec. You get turnkey landed pricing with zero hidden fees.">
+                        Nous prenons en charge l'ensemble du processus douanier et logistique : détermination des codes tarifaires SH, déclaration d'importation commerciale, conformité ASFC/CARM et livraison finale jusqu'à votre adresse au Québec. Vous recevez un prix clé en main sans frais cachés.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-display font-bold text-navy-950 hover:text-gold-600 transition-colors">
+                        <span data-fr="J'ai déjà trouvé un fournisseur sur Alibaba, pouvez-vous vérifier s'il est fiable ?" data-en="I already found a supplier on Alibaba—can you verify if they are legitimate?">J'ai déjà trouvé un fournisseur sur Alibaba, pouvez-vous vérifier s'il est fiable ?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-4" data-fr="Absolument. Envoyez-nous le lien ou le nom du fournisseur : notre équipe en Chine vérifie s'il s'agit d'une véritable usine ou d'un simple revendeur, audite sa fiabilité, renégocie souvent un meilleur tarif directement à la source et supervise l'inspection et l'expédition." data-en="Absolutely. Send us the supplier link or name: our China team verifies whether they are an actual factory or a trading middleman, audits their reliability, often negotiates a better factory-direct price, and oversees inspection and shipping.">
+                        Absolument. Envoyez-nous le lien ou le nom du fournisseur : notre équipe en Chine vérifie s'il s'agit d'une véritable usine ou d'un simple revendeur, audite sa fiabilité, renégocie souvent un meilleur tarif directement à la source et supervise l'inspection et l'expédition.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE REQUEST SECTION (WEB3FORMS READY) -->
+    <section id="soumission" class="py-24 bg-navy-950 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[45rem] h-[45rem] bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Info Column -->
+                <div class="lg:col-span-5 reveal">
+                    <span class="text-gold-400 font-display font-extrabold text-xs uppercase tracking-widest block mb-2" data-fr="Soumission Gratuite & Rapide" data-en="Fast & Free Quote">Soumission Gratuite & Rapide</span>
+                    <h2 class="text-3xl sm:text-4xl font-display font-black text-white mb-4" data-fr="Parlez-nous de votre projet d'importation" data-en="Tell Us About Your Import Project">Parlez-nous de votre projet d'importation</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-8" data-fr="Que vous ayez un produit précis en tête, un lien Alibaba à vérifier ou un besoin de fabrication sur mesure, notre équipe vous répond sous 24 à 48h avec une stratégie claire." data-en="Whether you have a specific product in mind, an Alibaba link to verify, or a custom manufacturing need, our team responds within 24–48 hours with a clear plan.">
+                        Que vous ayez un produit précis en tête, un lien Alibaba à vérifier ou un besoin de fabrication sur mesure, notre équipe vous répond sous 24 à 48h avec une stratégie claire.
+                    </p>
+
+                    <div class="space-y-5 bg-navy-900/90 p-6 rounded-2xl border border-navy-800">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-display font-bold text-sm text-white" data-fr="Siège Social" data-en="Headquarters">Siège Social</div>
+                                <div class="text-xs text-slate-400">Montréal, Québec, Canada</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-display font-bold text-sm text-white" data-fr="Courriel Direct" data-en="Direct Email">Courriel Direct</div>
+                                <a href="mailto:info@ghandourimport.ca" class="text-xs text-gold-400 hover:underline">info@ghandourimport.ca</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
+                                <i data-lucide="globe-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="font-display font-bold text-sm text-white" data-fr="Bureaux d'Inspection partenaires" data-en="Partner Inspection Hubs">Bureaux d'Inspection partenaires</div>
+                                <div class="text-xs text-slate-400">Ningbo &bull; Yiwu &bull; Shenzhen &bull; Guangzhou</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form Column -->
+                <div class="lg:col-span-7 reveal reveal-delay-1">
+                    <!-- IMPORTANT: Remplacez da951c23-b329-47c3-8f84-bb2030be2676 par votre clé gratuite de web3forms.com -->
+                    <form action="https://api.web3forms.com/submit" method="POST" class="bg-navy-900 p-8 sm:p-10 rounded-2xl border border-navy-800 shadow-2xl">
+                        <input type="hidden" name="access_key" value="da951c23-b329-47c3-8f84-bb2030be2676">
+                        <input type="hidden" name="subject" value="Nouvelle Demande de Soumission - GhandourImport.ca">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                            <div>
+                                <label class="block text-xs font-display font-bold uppercase tracking-wider text-slate-300 mb-2" data-fr="Nom Complet *" data-en="Full Name *">Nom Complet *</label>
+                                <input type="text" name="name" required placeholder="Jean Tremblay" class="w-full bg-navy-950 border border-navy-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-display font-bold uppercase tracking-wider text-slate-300 mb-2" data-fr="Entreprise" data-en="Company Name">Entreprise</label>
+                                <input type="text" name="company" placeholder="Nom de votre entreprise" class="w-full bg-navy-950 border border-navy-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                            <div>
+                                <label class="block text-xs font-display font-bold uppercase tracking-wider text-slate-300 mb-2" data-fr="Courriel Professionnel *" data-en="Business Email *">Courriel Professionnel *</label>
+                                <input type="email" name="email" required placeholder="vous@entreprise.ca" class="w-full bg-navy-950 border border-navy-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-display font-bold uppercase tracking-wider text-slate-300 mb-2" data-fr="Téléphone *" data-en="Phone Number *">Téléphone *</label>
+                                <input type="tel" name="phone" required placeholder="(514) 000-0000" class="w-full bg-navy-950 border border-navy-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <label class="block text-xs font-display font-bold uppercase tracking-wider text-slate-300 mb-2" data-fr="Service Recherché" data-en="Service Needed">Service Recherché</label>
+                            <select name="service" class="w-full bg-navy-950 border border-navy-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors">
+                                <option value="Sourcing Clé en Main (Recherche usine + QC + Fret + Douanes)" data-fr="Sourcing Clé en Main (Usine + Inspection + Fret + Douanes)" data-en="Turnkey Sourcing (Factory + QC + Freight + Customs)">Sourcing Clé en Main (Usine + Inspection + Fret + Douanes)</option>
+                                <option value="Vérification d'usine & Contrôle Qualité en Chine" data-fr="Vérification d'usine & Contrôle Qualité en Chine" data-en="Factory Audit & Quality Inspection in China">Vérification d'usine & Contrôle Qualité en Chine</option>
+                                <option value="Fret Maritime/Aérien & Dédouanement CARM" data-fr="Fret Maritime/Aérien & Dédouanement CARM" data-en="Sea/Air Freight & CARM Customs Clearance">Fret Maritime/Aérien & Dédouanement CARM</option>
+                                <option value="Fabrication sur Mesure / Private Label" data-fr="Fabrication sur Mesure / Marque Privée (OEM)" data-en="Custom Manufacturing / Private Label (OEM)">Fabrication sur Mesure / Marque Privée (OEM)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-xs font-display font-bold uppercase tracking-wider text-slate-300 mb-2" data-fr="Détails du produit (Description, quantités estimées, liens Alibaba/Web) *" data-en="Product Details (Description, estimated quantity, Alibaba/Web links) *">Détails du produit (Description, quantités estimées, liens Alibaba/Web) *</label>
+                            <textarea name="message" rows="4" required placeholder="Décrivez le produit que vous souhaitez importer, la quantité souhaitée et vos objectifs..." class="w-full bg-navy-950 border border-navy-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-display font-black text-sm uppercase tracking-wider py-4 rounded-xl shadow-lg shadow-gold-500/20 transition-all transform hover:-translate-y-0.5 flex justify-center items-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span data-fr="Envoyer ma demande de soumission" data-en="Submit My Quote Request">Envoyer ma demande de soumission</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXECUTIVE FOOTER -->
+    <footer class="bg-navy-950 border-t border-navy-900 pt-16 pb-10 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+                
+                <!-- Brand Column (Uses your full logo.png framed cleanly) -->
+                <div class="md:col-span-5">
+                    <div class="inline-block bg-white px-4 py-2.5 rounded-xl shadow-md mb-5">
+                        <img src="logo.png" alt="Ghandour Import" class="h-14 w-auto object-contain logo-blend">
+                    </div>
+                    <p class="text-slate-400 max-w-sm leading-relaxed mb-6" data-fr="Ghandour Import accompagne les entreprises canadiennes dans l'approvisionnement direct en Chine, l'inspection qualité en usine et la logistique internationale clé en main." data-en="Ghandour Import empowers Canadian businesses with factory-direct sourcing in China, on-site quality inspection, and turnkey international logistics.">
+                        Ghandour Import accompagne les entreprises canadiennes dans l'approvisionnement direct en Chine, l'inspection qualité en usine et la logistique internationale clé en main.
+                    </p>
+                </div>
+
+                <!-- Navigation Column -->
+                <div class="md:col-span-3">
+                    <h4 class="text-white font-display font-bold uppercase text-xs tracking-widest mb-4" data-fr="Navigation" data-en="Quick Links">Navigation</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#avantage" class="hover:text-gold-400 transition-colors" data-fr="Pourquoi Ghandour Import" data-en="Why Ghandour Import">Pourquoi Ghandour Import</a></li>
+                        <li><a href="#realisations" class="hover:text-gold-400 transition-colors" data-fr="Opérations en Chine" data-en="China Operations">Opérations en Chine</a></li>
+                        <li><a href="#processus" class="hover:text-gold-400 transition-colors" data-fr="Processus en 4 étapes" data-en="4-Step Process">Processus en 4 étapes</a></li>
+                        <li><a href="#faq" class="hover:text-gold-400 transition-colors" data-fr="Questions Fréquentes" data-en="FAQ">Questions Fréquentes</a></li>
+                        <li><a href="#soumission" class="hover:text-gold-400 transition-colors" data-fr="Demander une soumission" data-en="Request a Quote">Demander une soumission</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Compliance Column -->
+                <div class="md:col-span-4">
+                    <h4 class="text-white font-display font-bold uppercase text-xs tracking-widest mb-4">Contact & Conformité</h4>
+                    <p class="mb-2 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-gold-500"></i> Montréal, Québec, Canada</p>
+                    <p class="mb-4 flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-gold-500"></i> info@ghandourimport.ca</p>
+                    <div class="p-3.5 rounded-xl bg-navy-900 border border-navy-800 text-xs text-slate-300 flex items-center gap-3">
+                        <img src="favicon.png" alt="Icon" class="w-8 h-8 rounded-full bg-white p-0.5 object-contain shrink-0">
+                        <span data-fr="Entreprise immatriculée au Québec (REQ) & Importateur enregistré ASFC / CARM." data-en="Registered Quebec Enterprise (REQ) & CBSA / CARM Registered Importer.">Entreprise immatriculée au Québec (REQ) & Importateur enregistré ASFC / CARM.</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-navy-900 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 Ghandour Import. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span></p>
+                <p class="mt-2 sm:mt-0 font-display uppercase tracking-widest text-[11px] text-slate-400">Logistics &amp; Commerce International</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS: Icons, Scroll Reveal, Counters, Portfolio Filter, FAQ & Bilingual Engine -->
+    <script>
+        // 1. Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 2. Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // 3. Scroll Reveal Observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.12 });
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // 4. Animated Number Counters
+        const counters = document.querySelectorAll('.counter');
+        let countersStarted = false;
+        const counterObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !countersStarted) {
+                countersStarted = true;
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    if (target === 0) {
+                        counter.innerText = '0';
+                        return;
+                    }
+                    const duration = 1400;
+                    const stepTime = Math.max(Math.floor(duration / target), 25);
+                    let current = 0;
+                    const timer = setInterval(() => {
+                        current += Math.ceil(target / 40);
+                        if (current >= target) {
+                            counter.innerText = target;
+                            clearInterval(timer);
+                        } else {
+                            counter.innerText = current;
+                        }
+                    }, stepTime);
+                });
+            }
+        }, { threshold: 0.5 });
+        if (counters.length > 0) counterObserver.observe(counters[0]);
+
+        // 5. Filterable China Operations Portfolio
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-navy-950', 'text-gold-400');
+                btn.classList.add('bg-white', 'text-navy-900');
+            });
+            event.currentTarget.classList.remove('bg-white', 'text-navy-900');
+            event.currentTarget.classList.add('bg-navy-950', 'text-gold-400');
+
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // 6. Interactive FAQ Accordion
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // 7. Instant Bilingual Engine (FR / EN)
+        let currentLang = 'fr';
+        function toggleLanguage() {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            document.documentElement.lang = currentLang;
+
+            document.getElementById('langLabel').innerText = currentLang === 'fr' ? 'EN' : 'FR';
+            document.getElementById('langLabelMobile').innerText = currentLang === 'fr' ? 'EN' : 'FR';
+
+            document.querySelectorAll('[data-fr][data-en]').forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLang}`);
+            });
+        }
+    </script>
+</body>
+</html>
